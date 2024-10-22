@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    /* Primary Colours */
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral Colours */
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 14px;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--green-200);
+}
+
+.main {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Name Section  */
+.names {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.first-name> :first-child:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+.last-name> :first-child:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+
+/* Email Section */
+#email {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--grey-900);
+}
+
+.e-address {
+    margin-top: 10px;
+}
+
+.e-address> :first-child:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+
+/* Query Section */
+.query {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.query-type {
+    margin-top: 10px;
+}
+
+.query-type> :first-child:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+.query-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-family: "Karla", sans-serif;
+    font-size: 14px;
+    border: 1px solid var(--grey-900);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+
+/* Message Section */
+#message {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+    border-radius: 5px;
+    resize: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.messages {
+    margin-top: 10px;
+}
+
+.messages> :first-child:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+/* Check Section */
+.check {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.check>p:after {
+    content: "*";
+    color: var(--green-600);
+    margin-left: 5px;
+}
+
+
+input[name="choose"] {
+    accent-color: var(--green-600);
+}
+
+/* Submit Section */
+.submit {
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--green-600);
+    border: 0;
+    color: var(--white);
+    border-radius: 5px;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit:hover {
+    background-color: hsl(169, 82%, 20%);
+}
+
+/* Others */
+
+.box {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+input[name="name"]:focus,
+.query-items:focus,
+#email:focus {
+    border: 0;
+    outline: 1px solid var(--green-600);
+}
+
+input[name="name"]:hover,
+.query-items:hover,
+#email:hover {
+    border: 0;
+    outline: 1px solid var(--green-600);
+}
+
+.error-text,
+.success-msg {
+    visibility: hidden;
+    color: var(--red);
+}
+
+.icon-msg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.success-msg {
+    position: fixed;
+    background-color: var(--grey-900);
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--white);
+    width: max-content;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.selected {
+    background-color: var(--green-200);
+}
+
+@media (max-width: 375px) {
+    .main {
+        margin: 15px;
+    }
+
+    .names {
+        flex-direction: column;
+    }
+
+    .query {
+        flex-direction: column;
+    }
+
+    #message {
+        height: 200px;
+        resize: vertical none;
+    }
+
+    .check {
+        gap: 20px;
+    }
+
+    .submit {
+        margin-top: 20px;
+        padding: 15px;
+    }
+}

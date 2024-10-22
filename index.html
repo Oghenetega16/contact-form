@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+    <div class="main">
+        <form id="contact-form">
+            <h1>Contact Us</h1>
+            <!-- First and Last Names -->
+            <div class="names">
+                <div class="first-name">
+                    <label>First Name</label>
+                    <input id="firstName" type="text" name="name" class="box">
+                    <p id="firstNameError" class="error-text">This field is required</p>
+                </div>
+
+                <div class="last-name">
+                    <label>Last Name</label>
+                    <input id="lastName" type="text" name="name" class="box">
+                    <p id="lastNameError" class="error-text">This field is required</p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="e-address">
+                <p>Email Address</p>
+                <input id="email" type="email" name="name" class="email">
+                <p id="emailError" class="error-text">Please enter a valid email address</p>
+            </div>
+
+
+            <!-- Query Type -->
+            <div class="query-type" id="queryType">
+                <p>Query Type</p>
+                <div class="query">
+                    <div id="query-items" class="query-items">
+                        <input type="radio" id="generalQuery" name="choose" class="radio" value="var(--green-200)">
+                        <label for="general enquiry">General Enquiry</label>
+                    </div>
+
+                    <div id="query-items" class="query-items">
+                        <input type="radio" id="supportQuery" name="choose" class="radio" value="var(--green-200)">
+                        <label for="support request">Support Request</label>
+                    </div>
+                </div>
+                <p id="queryTypeError" class="error-text">Please select a query type</p>
+            </div>
+
+
+            <!-- Message -->
+            <div class="messages">
+                <p>Message</p>
+                <textarea name="message" id="message" class="message"></textarea>
+                <p id="messageError" class="error-text">This field is required</p>
+            </div>
+
+            <!-- Check -->
+            <div id="checks">
+                <div class="check">
+                    <input type="checkbox" name="choose" id="consent" class="checkbox">
+                    <p>I consent to being contacted by the team</p>
+                </div>
+                <p id="consentError" class="error-text">To submit this form, please consent to being contacted</p>
+            </div>
+
+            <button class="submit">Submit</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="success-msg">
+            <div class="icon-msg">
+                <img src="./assets/images/icon-success-check.svg" alt="">
+                <h4>Message Sent!</h4>
+            </div>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
