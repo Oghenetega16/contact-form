@@ -80,7 +80,10 @@ form.addEventListener('submit', (event) => {
     // Form validation
     if(isValid) {
         document.querySelector('#success-message').style.visibility = 'visible';
-        form.reset;
+        setTimeout(() => {
+            document.querySelector('#success-message').style.visibility = 'hidden';
+        }, 2000);
+        form.reset();
     }
 });
 
